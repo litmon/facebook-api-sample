@@ -10,6 +10,8 @@ ActiveRecord::Base.establish_connection(
   database: 'development.sqlite3'
 )
 
+@title = 'Facebook Api Sample'
+
 get '/' do
   'Hello World!'
 end
