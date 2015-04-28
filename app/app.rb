@@ -44,7 +44,5 @@ get '/auth/:name/callback' do
   session[:facebook_access_token] =
     oauth_consumer.get_access_token(params[:code], redirect_uri: url)
 
-  puts session[:facebook_access_token]
-
   redirect '/'
 end
