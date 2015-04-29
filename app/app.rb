@@ -3,10 +3,10 @@ require 'sinatra/reloader'
 require 'sinatra/activerecord'
 
 configure do
-set :slim, format: :html
-set :database, {
-  adapter: 'sqlite3', database: 'development.sqlite3'
-}
+  set :slim, format: :html
+  set :database, {
+    adapter: 'sqlite3', database: 'development.sqlite3'
+  }
 end
 
 def oauth_consumer
@@ -35,7 +35,7 @@ before do
 end
 
 get '/' do
-  puts @graph
+  # puts @graph
   slim :index
 end
 
